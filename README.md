@@ -182,3 +182,28 @@ align-content: space-evenly;
 
 width: 100%, width: 100vw 차이점
 <img width="738" height="238" alt="image" src="https://github.com/user-attachments/assets/afa390d8-9a3a-45b8-a456-dc8dbf6db88c" />
+
+# 참고 : height: 100vh를 대신하는 방법
+height: 100vh는 뷰포트(브라우저 창)의 높이 전체를 차지하겠다는 의미입니다. 
+이를 대체하는 방법은 주로 부모 요소에 따라 달라집니다.A. 부모를 따라 높이 꽉 채우기 (뷰포트 높이와 동일한 효과)100vh는 뷰포트 높이에 고정되지만, 100%는 부모의 높이에 의존합니다. $\text{HTML}$에서 <body>가 뷰포트 전체 높이를 차지하도록 설정하면, 그 자식인 .body는 height: 100%로 $\text{100vh}$와 같은 효과를 낼 수 있습니다.CSS/* 부모 요소(<html>과 <body>)의 높이를 뷰포트 높이와 동일하게 만듦 
+
+*/
+html, body {
+    height: 100%; /* 또는 height: 100vh; */
+    margin: 0;
+}
+
+/* 이제 .body는 부모(<body>)의 높이를 꽉 채울 수 있음 */
+.body {
+    display: flex;
+    height: 100%; /* ⬅️ 100vh 대신 100%를 사용하여 동일 효과 */
+    /* width: auto; (생략 가능) */
+}
+
+
+B. 콘텐츠에 따라 유동적으로 높이 결정만약 .body가 뷰포트를 꽉 채울 필요가 없고, 내부 콘텐츠의 양에 따라 높이가 유연하게 늘어나도록 하고 싶다면, height: 100vh를 제거하면 됩니다.
+CSS 속성설명height: auto; (생략 가능)$\text{div}$의 기본 동작으로, $\text{Flex item}$의 높이를 포함하여 내부 콘텐츠 높이에 맞춰 유동적으로 늘어납니다.
+
+min-height: 100vh; 
+콘텐츠가 적을 때는 최소한 뷰포트 높이를 유지하고, 콘텐츠가 많아지면 뷰포트 높이 이상으로 늘어나게 만듭니다. 뷰포트 꽉 채우기 + 콘텐츠 오버플로우 대비에 가장 적합합니다.
+💡 가장 강력한 대안: height: 100vh를 대체하면서 내용물의 양에도 유연하게 대처하려면 **min-height: 100vh;**를 사용하는 것이 좋습니다.
