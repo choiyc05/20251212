@@ -180,3 +180,5 @@ align-content: space-evenly;
 </body>
 </html>
 
+width: 100%, width: 100vw 차이점
+<img width="738" height="238" alt="image" src="https://github.com/user-attachments/assets/afa390d8-9a3a-45b8-a456-dc8dbf6db88c" />
