@@ -110,3 +110,73 @@ align-content: space-evenly;
 ```
 
 
+251212study_04.html
+(체스판 배열)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    * {box-sizing: border-box;}
+    html, body  {margin: 0; padding: 0;}
+    /* div {height: 100px;} */
+    .body {display: flex; width: 100%; height: calc(100vh/6);}
+    .body div {flex-grow: 1;}
+    .bg1 {background-color: aqua;}
+    .bg2 {background-color: brown;}
+</style>
+</head>
+<body>
+    <div class="body">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+    </div>
+    <div class="body">
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+    </div>    
+    <div class="body">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+    </div>
+    <div class="body">
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+    </div>    
+    <div class="body">
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+    </div>
+    <div class="body">
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+        <div class="bg2"></div>
+        <div class="bg1"></div>
+    </div>    
+</body>
+</html>
+
