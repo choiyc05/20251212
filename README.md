@@ -15,6 +15,6 @@ UI / UX
 단, !important 입력 시 우선 순위 / 너무 많이 이용 시 헷갈릴 수 있음
 상황에 따라 유연하게 지정
 
-ex) <p style="padding: 0 30px;">
+ex) p style="padding: 0 30px;"
 padding: top right bottom left (시계 방향 순서)
-
+p style="padding: 0 30 0 30;" == p style="padding: 0 30px;"
